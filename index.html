@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogPattern Converter | Optimización de Logs sin Esfuerzo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-content-solid: #151515;    /* Nuevo color para bloques de contenido, casi sólido */
+            --text-light: #f8f8f8;
+            --accent-white: #ffffff;
+            --cta-button-color: #00cc66;
+            --cta-button-hover: #00b35b;
+            --border-subtle: #252525;
+        }
+
+        /* FONDO IMPACTANTE */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            /* IMAGEN DE FONDO (Requiere el archivo hero-bg.jpg en la raíz) */
+            background-image: url('hero-bg.jpg');
+            background-size: cover; 
+            background-position: center center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        /* OVERLAY OSCURO PARA LEGIBILIDAD (Aumentado al 90%) */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9); /* Capa de negro al 90% */
+            z-index: -1;
+        }
+
+        /* Estructura y Contenido */
+        .section {
+            padding: 80px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            z-index: 10;
+        }
+        .container {
+            width: 90%;
+            max-width: 960px;
+            text-align: center;
+            background-color: transparent;
+        }
+
+        /* Logo */
+        .logo img {
+            max-width: 180px; /* Tamaño aumentado */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            color: var(--accent-white); 
+            margin-bottom: 20px;
+            letter-spacing: -0.05em;
+        }
+        h2 {
+            font-size: 2em;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+        
+        /* CTA Box (Bloque de venta - ahora sólido) */
+        .cta-box {
+            background: var(--bg-content-solid); /* Color más sólido */
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 60px;
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        }
+        .price {
+            font-size: 4em; 
+            font-weight: 700;
+            color: var(--cta-button-color); 
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+        .cta-button { 
+            display: inline-block; padding: 16px 45px; background: var(--cta-button-color); 
+            color: var(--bg-primary); font-size: 1.5em; font-weight: 700; border-radius: 6px; 
+            transition: background 0.3s ease, transform 0.2s ease; margin-top: 30px; text-transform: uppercase;
+        }
+
+        /* Características y Código (Bloques de lista - ahora sólidos) */
+        .features-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .features-list li {
+            background-color: var(--bg-content-solid); /* Color más sólido */
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1em;
+            color: var(--text-light);
+            text-align: left;
+            border-left: 3px solid var(--cta-button-color);
+        }
+        .code-install {
+            background-color: var(--bg-content-solid); /* Color más sólido */
+            padding: 20px 25px;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 1em;
+            margin-top: 40px;
+            text-align: left;
+            border: 1px solid var(--border-subtle);
+        }
+        code {
+            font-weight: 400;
+            color: var(--cta-button-color);
+        }
+        
+        /* Media Query para Desktop (Responsiveness) */
+        @media (min-width: 768px) {
+            .features-list {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .features-list li {
+                width: 30%;
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <header>
+                <div class="logo">
+                    <img src="logo.png" alt="LogPattern Converter Logo">
+                </div>
+                <h1>LogPattern Converter CLI</h1>
+                <p style="font-size: 1.4em; color: var(--text-light);">La herramienta de refactorización de patrones de logs más precisa del mercado.</p>
+            </header>
+            
+            <p><strong>LogPattern Converter</strong> elimina la fricción de las migraciones de observabilidad. Identificamos, transformamos y validamos patrones de logs complejos de sistemas *legacy* a formatos modernos en **cuestión de segundos**.</p>
+            
+            <h2>Precisión sin Esfuerzo</h2>
+
+            <ul class="features-list">
+                <li><strong>Transformación Inteligente</strong>
+                    <p>Análisis avanzado para inferir patrones no obvios, entregando reglas de conversión precisas que evitan fallos en producción.</p>
+                </li>
+                <li><strong>Ahorro Garantizado</strong>
+                    <p>Reduzca el esfuerzo de ingeniería de semanas a minutos. Libere a su equipo de la tediosa escritura y depuración de expresiones regulares.</p>
+                </li>
+                <li><strong>Estándares de la Industria</strong>
+                    <p>Compatibilidad con OpenTelemetry y las librerías más usadas, asegurando una integración sin esfuerzo con sus plataformas.</p>
+                </li>
+            </ul>
+
+            <div class="cta-box">
+                <p style="font-size: 1.1em; font-weight: 600;">Licencia de Uso Ilimitado.</p>
+                <div class="price">$9.99 USD</div>
+                
+                <a id="payment-link" href="https://buy.stripe.com/aFa4gz78D8Ma1XF5Z21VK00" class="cta-button">COMPRAR LICENCIA AHORA</a>
+                
+                <p class="small-text">Su clave es digital, se entrega automáticamente a su correo electrónico tras la compra.</p>
+            </div>
+            
+            <div class="code-install">
+                <strong>Comience en tres pasos:</strong><br>
+                1. Instale la herramienta: <code>pip install logpattern-converter</code><br>
+                2. Use su clave de licencia: <code>logconv activar [SU_CLAVE]</code> (funcionalidad futura)<br>
+                3. Convierta: <code>logconv convertir "Su línea de log de ejemplo aquí..."</code>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
