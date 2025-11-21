@@ -1,16 +1,19 @@
 Metadata-Version: 2.4
 Name: logpattern-converter
-Version: 0.1.0
-Summary: Herramienta de Arbitraje de Código para la refactorización rápida de patrones de logs.
-Home-page: https://github.com/Eche/logpattern-converter-agi
-Author: LogPattern Converter AGI
-License: Proprietary (License Key Required for Full Functionality)
-Requires-Dist: click
+Version: 0.1.1
+Summary: Herramienta CLI para la conversión y refactorización de patrones de logs.
+Home-page: https://github.com/Echek7/logpattern_converter
+Author: Echek7 (AGI_ECHE)
+Author-email: contact@agi-eche.com
+License: Proprietary (Licencia de Pago Único)
+Description-Content-Type: text/markdown
 Dynamic: author
+Dynamic: author-email
 Dynamic: description
+Dynamic: description-content-type
 Dynamic: home-page
 Dynamic: license
-Dynamic: requires-dist
 Dynamic: summary
 
-Convierte formatos de log legacy (ej. Splunk/Logstash) a formatos modernos (ej. OpenTelemetry) usando inferencia de patrones impulsada por AGI. Ahorra cientos de horas de ingeniería.
+
+Sitio web actualizado para Vendedor M2M.

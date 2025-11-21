@@ -2,7 +2,7 @@
 
 setup(
     name='logpattern-converter',
-    version='0.1.0',
+    version='0.1.1',
     packages=find_packages(),
     install_requires=[
         # No se requieren dependencias externas para la lógica básica

@@ -1,2 +1,2 @@
 [console_scripts]
-logconv = logpattern_converter:cli
+logconv = logconv:main
