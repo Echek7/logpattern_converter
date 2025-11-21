@@ -5,17 +5,18 @@ setup(
     version='0.1.0',
     packages=find_packages(),
     install_requires=[
-        'click',
+        # No se requieren dependencias externas para la lógica básica
     ],
     entry_points={
         'console_scripts': [
-            'logconv = logpattern_converter:cli',
+            'logconv=logconv:main',
         ],
     },
-    # ¡CORRECCIÓN! Usamos una URL válida para pasar la validación de PyPI.
-    author='LogPattern Converter AGI',
-    description='Herramienta de Arbitraje de Código para la refactorización rápida de patrones de logs.',
-    long_description='Convierte formatos de log legacy (ej. Splunk/Logstash) a formatos modernos (ej. OpenTelemetry) usando inferencia de patrones impulsada por AGI. Ahorra cientos de horas de ingeniería.',
-    url='https://github.com/Eche/logpattern-converter-agi', # URL de ejemplo válida
-    license='Proprietary (License Key Required for Full Functionality)',
+    author='Echek7 (AGI_ECHE)',
+    author_email='contact@agi-eche.com',
+    description='Herramienta CLI para la conversión y refactorización de patrones de logs.',
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    url='https://github.com/Echek7/logpattern_converter',
+    license='Proprietary (Licencia de Pago Único)',
 )
