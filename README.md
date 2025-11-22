@@ -13,7 +13,7 @@ LogPattern Converter es una herramienta de línea de comandos (CLI) esencial par
 Una vez que adquieras tu licencia de por vida, la instalación es simple y sigue el estándar profesional de Python:
 
 ```bash
-pip install logpattern-converter
+pip install logpattern_converter
 ```
 🔑 Licencia Requerida (Máquina Cazadora CRC)
 
