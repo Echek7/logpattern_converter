@@ -33,11 +33,15 @@ jobs:
 
       - name: Install repo dev deps (pip)
         run: |
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip setuptools wheel
+          # Asegura que pytest esté disponible en el runner
+          pip install pytest
+          # Instala resto de dependencias si existe requirements.txt
           if (Test-Path "requirements.txt") { pip install -r requirements.txt } else { Write-Output "No requirements.txt found; continuing..." }
 
       - name: Run unit tests (pytest)
         run: |
+          # Si quieres forzar una carpeta específica de tests, cámbialo por: python -m pytest path/to/testdir -q
           python -m pytest -q
         continue-on-error: false
 
