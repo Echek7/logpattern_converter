@@ -40,23 +40,34 @@ jobs:
           if (Test-Path "requirements.txt") { pip install -r requirements.txt } else { Write-Output "No requirements.txt found; continuing..." }
 
       - name: Run unit tests (pytest)
-        # usamos PowerShell para gestionar códigos de salida específicos de pytest
         shell: pwsh
         run: |
-          Write-Output "Running pytest in folder: ./test (if you keep tests in 'tests' change this path)"
-          try {
-            python -m pytest test -q
-          } catch {
-            $code = $LASTEXITCODE
-            if ($code -eq 5) {
-              Write-Output "PYTEST: No tests collected in 'test' (exit code 5). Continuing the workflow (not a hard failure)."
-              exit 0
+          Write-Output "Running pytest: will try ./tests then ./test (if present)."
+          $paths = @("tests","test")
+          $ranAny = $false
+          foreach ($p in $paths) {
+            if (Test-Path $p) {
+              Write-Output "Attempting pytest on path: $p"
+              python -m pytest $p -q
+              $code = $LASTEXITCODE
+              if ($code -eq 0) {
+                Write-Output "PYTEST OK on $p"
+                $ranAny = $true
+                break
+              } elseif ($code -eq 5) {
+                Write-Output "PYTEST: No tests collected in $p (exit code 5). Trying next path."
+                continue
+              } else {
+                Write-Error "PYTEST failed on $p with exit code $code"
+                exit $code
+              }
             } else {
-              Write-Error "PYTEST failed with exit code $code"
-              exit $code
+              Write-Output "Path not found: $p"
             }
           }
-        continue-on-error: false
+          if (-not $ranAny) {
+            Write-Output "PYTEST: No tests collected in any path. Continuing pipeline (not a hard failure)."
+          }
 
       - name: Prepare Windows PowerShell execution policy
         shell: pwsh
@@ -90,6 +101,7 @@ jobs:
       - name: Map required secret envvars for local E2E (set from repo secrets)
         shell: pwsh
         run: |
+          # Mapear secrets al entorno para el script E2E
           $Env:STRIPE_TEST_KEY = "${{ secrets.STRIPE_TEST_KEY }}"
           $Env:STRIPE_WEBHOOK_FORWARD_URL = "${{ secrets.STRIPE_WEBHOOK_FORWARD_URL }}"
           $Env:GCP_SA_KEY = "${{ secrets.GCP_SA_KEY }}"
