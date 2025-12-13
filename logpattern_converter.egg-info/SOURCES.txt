@@ -1,7 +1,13 @@
 README.md
 setup.py
+logpattern_converter/__init__.py
+logpattern_converter/__main__.py
+logpattern_converter/converter.py
+logpattern_converter/license_client.py
 logpattern_converter.egg-info/PKG-INFO
 logpattern_converter.egg-info/SOURCES.txt
 logpattern_converter.egg-info/dependency_links.txt
 logpattern_converter.egg-info/entry_points.txt
+logpattern_converter.egg-info/requires.txt
 logpattern_converter.egg-info/top_level.txt
+tests/test_converter.py

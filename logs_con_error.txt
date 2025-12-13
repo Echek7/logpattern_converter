@@ -1,0 +1,4 @@
+2025-11-22 10:00:00 INFO - Normal connection. ID: 50.
+2025-11-22 10:01:30 WARNING - API latency high. user_id=105, duration=2.5s
+MALFORMED LINE, NO DATE, NO SEVERITY
+2025-11-22 10:02:15 ERROR - Critical process failed. code=500

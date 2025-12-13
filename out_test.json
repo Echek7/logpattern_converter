@@ -1,0 +1,12 @@
+{
+  "pattern_name": "ACCESS",
+  "processed": 2,
+  "matched": 1,
+  "samples": [
+    {
+      "ip": "127.0.0.1",
+      "time": "2025-01-01T12:00:00Z",
+      "req": "GET /index HTTP/1.1"
+    }
+  ]
+}

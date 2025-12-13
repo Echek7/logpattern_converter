@@ -1,22 +1,34 @@
-﻿from setuptools import setup, find_packages
+﻿import setuptools
 
-setup(
-    name='logpattern-converter',
-    version='0.1.1',
-    packages=find_packages(),
-    install_requires=[
-        # No se requieren dependencias externas para la lógica básica
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="logpattern_converter",
+    version="1.0.3",
+    author="Tu Nombre Aquí",
+    author_email="tu.correo@ejemplo.com",
+    description="Herramienta profesional de refactorización de logs a JSON estructurado.",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/echek7/logpattern_converter", 
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Environment :: Console",
     ],
+    python_requires='>=3.6',
+    
+    install_requires=[
+        'requests', 
+    ],
+    
     entry_points={
         'console_scripts': [
-            'logconv=logconv:main',
+            'logconv = logpattern_converter.__main__:main',
         ],
     },
-    author='Echek7 (AGI_ECHE)',
-    author_email='contact@agi-eche.com',
-    description='Herramienta CLI para la conversión y refactorización de patrones de logs.',
-    long_description=open('README.md').read(),
-    long_description_content_type='text/markdown',
-    url='https://github.com/Echek7/logpattern_converter',
-    license='Proprietary (Licencia de Pago Único)',
 )

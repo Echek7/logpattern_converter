@@ -1,0 +1,15 @@
+{
+  "active_key": "LP-875b39c6b1b870677706034be1841eed82a0ca474cabe41c79be6016526b35fc",
+  "machine_id": "db6c156710f62846f6582c8337d8b698377f24122d908d4b6b4909c32f5c896e",
+  "activated": true,
+  "activated_at": "2025-12-11T07:45:31Z",
+  "meta": {
+    "success": true,
+    "message": "✅ LICENCIA ACTIVADA: Clave 'LP-875b39c6b1b870677706034be1841eed82a0ca474cabe41c79be6016526b35fc' registrada con éxito.",
+    "licenseData": {
+      "key": "LP-875b39c6b1b870677706034be1841eed82a0ca474cabe41c79be6016526b35fc",
+      "machine": "db6c156710f62846f6582c8337d8b698377f24122d908d4b6b4909c32f5c896e",
+      "user": "anonymous_client"
+    }
+  }
+}

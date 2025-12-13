@@ -1,0 +1,2 @@
+{"timestamp": "2025-11-20T10:00:00Z", "severity": "INFO", "message": "Order Processed. ID: 101.", "attributes": {"duration_s": null, "user_id": 101, "response_code": null, "conversion_status": "FULL_CONVERSION_SUCCESSFUL"}}
+{"timestamp": "2025-11-20T10:01:00Z", "severity": "WARNING", "message": "Cache failure.", "attributes": {"duration_s": 1.2, "user_id": 99, "response_code": 500, "conversion_status": "FULL_CONVERSION_SUCCESSFUL"}}

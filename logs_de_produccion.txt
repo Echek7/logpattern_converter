@@ -1,0 +1,4 @@
+2025-11-21 11:15:20 INFO - Database connection successful.
+2025-11-21 11:16:05 WARNING - Timeout on external API. (code=408, user_id=45, duration=3.5s)
+2025-11-21 11:17:10 ERROR - Critical system failure. ID: 22.
+2025-11-21 11:17:45 DEBUG - User profile loaded. user_id=120, duration=0.1s
